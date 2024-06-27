@@ -1,4 +1,4 @@
-package com.mycompany.pricegap
+package com.mycompany.pricegap1
 
 import io.flutter.embedding.android.FlutterActivity
 

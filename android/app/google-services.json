@@ -12,7 +12,20 @@
           "package_name": "com.mycompany.pricegap"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "755260779416-138hs581llia68j2mtebflbq32jghsu6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.pricegap",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "755260779416-oj23d3jdpvs1mmjk89lud9b2ri1moe5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDbuJN6uMvf_y0b1PDxtzfufWrrEMg0CVY"
@@ -20,7 +33,63 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755260779416-oj23d3jdpvs1mmjk89lud9b2ri1moe5v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755260779416-cg880lrv49i822bdn9umml4vipv4qt14.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.pricegap"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755260779416:android:4f6265b755503df55059ed",
+        "android_client_info": {
+          "package_name": "com.mycompany.pricegap1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755260779416-o64mr3403hfd4g2mrdeo3m3rutmkii4q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.pricegap1",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "755260779416-oj23d3jdpvs1mmjk89lud9b2ri1moe5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbuJN6uMvf_y0b1PDxtzfufWrrEMg0CVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755260779416-oj23d3jdpvs1mmjk89lud9b2ri1moe5v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755260779416-cg880lrv49i822bdn9umml4vipv4qt14.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.pricegap"
+              }
+            }
+          ]
         }
       }
     }

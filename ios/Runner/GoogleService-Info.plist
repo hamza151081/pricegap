@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>755260779416-phcmj4eaohtsmcnkt4ec78q89lvn0r0q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.755260779416-phcmj4eaohtsmcnkt4ec78q89lvn0r0q</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>755260779416-138hs581llia68j2mtebflbq32jghsu6.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBgLaCRJ3V9jUuxrZ3I-2yaenPt5mwYZUo</string>
 	<key>GCM_SENDER_ID</key>
@@ -9,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mycompany.pricegap</string>
+	<string>com.mycompany.pricegap1</string>
 	<key>PROJECT_ID</key>
 	<string>price-gap-o3lhxh</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:755260779416:ios:d30bc76c274b68265059ed</string>
+	<string>1:755260779416:ios:ec8ddcb1d1e694935059ed</string>
 </dict>
 </plist>
