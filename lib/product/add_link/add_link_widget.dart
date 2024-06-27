@@ -80,7 +80,9 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 0.0),
                               child: Text(
-                                'Enter Amazon Product Url',
+                                FFLocalizations.of(context).getText(
+                                  'wsbqc4nx' /* Enter Amazon Product Url */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineMedium
                                     .override(
@@ -100,7 +102,9 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 0.0),
                               child: Text(
-                                'Once the product url added you will be able to track the product price overtime',
+                                FFLocalizations.of(context).getText(
+                                  'u1zbm4a4' /* Once the product url added you... */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -133,14 +137,20 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                                     readOnly: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Amazon product Url',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'kjv11l99' /* Amazon product Url */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             letterSpacing: 0.0,
                                           ),
-                                      hintText: 'Enter amazon url',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        'q25wy2ri' /* Enter amazon url */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -210,7 +220,9 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               onPressed: () async {
                                 Navigator.pop(context);
                               },
-                              text: 'Cancel',
+                              text: FFLocalizations.of(context).getText(
+                                'zf0ty7v8' /* Cancel */,
+                              ),
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 50.0,
@@ -237,7 +249,9 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               onPressed: () {
                                 print('Button pressed ...');
                               },
-                              text: 'Add product',
+                              text: FFLocalizations.of(context).getText(
+                                'm7yr5rkw' /* Add product */,
+                              ),
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 50.0,

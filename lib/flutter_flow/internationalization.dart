@@ -638,36 +638,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // addLink
   {
-    'ozbdooii': {
+    'wsbqc4nx': {
       'en': 'Enter Amazon Product Url',
       'fr': '',
     },
-    'bz4y7qfp': {
+    'u1zbm4a4': {
       'en':
           'Once the product url added you will be able to track the product price overtime',
       'fr': '',
     },
-    'pxprhn8m': {
+    'kjv11l99': {
       'en': 'Amazon product Url',
       'fr': '',
     },
-    '2zaw8vt9': {
+    'q25wy2ri': {
       'en': 'Enter amazon url',
-      'fr': '',
+      'fr': 'Entrez votre prénom',
     },
     'semqonwn': {
       'en': 'Field is required',
-      'fr': '',
+      'fr': 'Champ requis',
     },
     'f1603acg': {
       'en': 'Please choose an option from the dropdown',
-      'fr': '',
+      'fr': 'Veuillez choisir une option dans la liste déroulante',
     },
     '0ibkqx5s': {
       'en': 'Cancel',
-      'fr': '',
+      'fr': 'Annuler',
     },
-    'b70cgmui': {
+    'm7yr5rkw': {
       'en': 'Add product',
       'fr': '',
     },

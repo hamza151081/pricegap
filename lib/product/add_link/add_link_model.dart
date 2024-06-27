@@ -12,7 +12,9 @@ class AddLinkModel extends FlutterFlowModel<AddLinkWidget> {
   String? Function(BuildContext, String?)? textControllerValidator;
   String? _textControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Field is required';
+      return FFLocalizations.of(context).getText(
+        'jhzyrwj5' /* Field is required */,
+      );
     }
 
     return null;
