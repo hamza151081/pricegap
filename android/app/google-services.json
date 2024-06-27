@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "755260779416",
+    "project_id": "price-gap-o3lhxh",
+    "storage_bucket": "price-gap-o3lhxh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755260779416:android:5dc2c72ee087888c5059ed",
+        "android_client_info": {
+          "package_name": "com.mycompany.pricegap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbuJN6uMvf_y0b1PDxtzfufWrrEMg0CVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
