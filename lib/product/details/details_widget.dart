@@ -1,10 +1,10 @@
-import '/backend/backend.dart';
-import '/components/card17_location_widget.dart';
-import '/components/empty_product_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/product/add_link/add_link_widget.dart';
+import '/product/card17_location/card17_location_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'details_model.dart';
 export 'details_model.dart';
 
@@ -286,8 +286,27 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                           ),
                     ),
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        await showModalBottomSheet(
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          enableDrag: false,
+                          context: context,
+                          builder: (context) {
+                            return WebViewAware(
+                              child: GestureDetector(
+                                onTap: () => _model.unfocusNode.canRequestFocus
+                                    ? FocusScope.of(context)
+                                        .requestFocus(_model.unfocusNode)
+                                    : FocusScope.of(context).unfocus(),
+                                child: Padding(
+                                  padding: MediaQuery.viewInsetsOf(context),
+                                  child: const AddLinkWidget(),
+                                ),
+                              ),
+                            );
+                          },
+                        ).then((value) => safeSetState(() {}));
                       },
                       text: FFLocalizations.of(context).getText(
                         'b0kuy3bm' /* Add product */,
@@ -322,43 +341,18 @@ class _DetailsWidgetState extends State<DetailsWidget> {
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: StreamBuilder<List<UsersRecord>>(
-                  stream: queryUsersRecord(),
-                  builder: (context, snapshot) {
-                    // Customize what your widget looks like when it's loading.
-                    if (!snapshot.hasData) {
-                      return Center(
-                        child: SizedBox(
-                          width: 50.0,
-                          height: 50.0,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              FlutterFlowTheme.of(context).primary,
-                            ),
-                          ),
-                        ),
-                      );
-                    }
-                    List<UsersRecord> listViewUsersRecordList = snapshot.data!;
-                    if (listViewUsersRecordList.isEmpty) {
-                      return const EmptyProductWidget();
-                    }
-                    return ListView.separated(
-                      padding: EdgeInsets.zero,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.vertical,
-                      itemCount: listViewUsersRecordList.length,
-                      separatorBuilder: (_, __) => const SizedBox(height: 16.0),
-                      itemBuilder: (context, listViewIndex) {
-                        final listViewUsersRecord =
-                            listViewUsersRecordList[listViewIndex];
-                        return Card17LocationWidget(
-                          key: Key(
-                              'Keysmm_${listViewIndex}_of_${listViewUsersRecordList.length}'),
-                        );
-                      },
-                    );
-                  },
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    wrapWithModel(
+                      model: _model.card17LocationModel,
+                      updateCallback: () => setState(() {}),
+                      updateOnChange: true,
+                      child: const Card17LocationWidget(),
+                    ),
+                  ].divide(const SizedBox(height: 16.0)),
                 ),
               ),
             ],

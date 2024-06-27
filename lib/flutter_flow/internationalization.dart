@@ -636,6 +636,42 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Réinitialiser le mot de passe',
     },
   },
+  // addLink
+  {
+    'ozbdooii': {
+      'en': 'Enter Amazon Product Url',
+      'fr': '',
+    },
+    'bz4y7qfp': {
+      'en':
+          'Once the product url added you will be able to track the product price overtime',
+      'fr': '',
+    },
+    'pxprhn8m': {
+      'en': 'Amazon product Url',
+      'fr': '',
+    },
+    '2zaw8vt9': {
+      'en': 'Enter amazon url',
+      'fr': '',
+    },
+    'semqonwn': {
+      'en': 'Field is required',
+      'fr': '',
+    },
+    'f1603acg': {
+      'en': 'Please choose an option from the dropdown',
+      'fr': '',
+    },
+    '0ibkqx5s': {
+      'en': 'Cancel',
+      'fr': '',
+    },
+    'b70cgmui': {
+      'en': 'Add product',
+      'fr': '',
+    },
+  },
   // Miscellaneous
   {
     '73v7fg7o': {
