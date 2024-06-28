@@ -75,6 +75,7 @@ dependencies:
   plugin_platform_interface: 2.1.8
   pointer_interceptor: 0.10.1
   provider: 6.1.2
+  receive_sharing_intent: 1.8.0
   rxdart: 0.27.7
   shared_preferences: 2.2.2
   shared_preferences_android: 2.2.1

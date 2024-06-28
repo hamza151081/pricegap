@@ -126,6 +126,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'emailNeedVerification',
           path: '/emailNeedVerification',
           builder: (context, params) => const EmailNeedVerificationWidget(),
+        ),
+        FFRoute(
+          name: 'terms_conditions',
+          path: '/termsConditions',
+          builder: (context, params) => const TermsConditionsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

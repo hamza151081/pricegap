@@ -9,3 +9,5 @@ export '/product/webview_product/webview_product_widget.dart'
 export '/settings/settings/settings_widget.dart' show SettingsWidget;
 export '/authentification_folder/email_need_verification/email_need_verification_widget.dart'
     show EmailNeedVerificationWidget;
+export '/terms/terms_conditions/terms_conditions_widget.dart'
+    show TermsConditionsWidget;

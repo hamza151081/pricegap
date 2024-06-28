@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/settings/chang_langauge/chang_langauge_widget.dart';
 import '/settings/chang_profile/chang_profile_widget.dart';
 import '/settings/reset_password/reset_password_widget.dart';
+import '/subscription/payments/payments_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -282,6 +283,26 @@ class _SettingsWidgetState extends State<SettingsWidget>
                               .controller
                               .forward(from: 0.0));
                     }
+                    await showModalBottomSheet(
+                      isScrollControlled: true,
+                      backgroundColor: Colors.transparent,
+                      enableDrag: false,
+                      context: context,
+                      builder: (context) {
+                        return WebViewAware(
+                          child: GestureDetector(
+                            onTap: () => _model.unfocusNode.canRequestFocus
+                                ? FocusScope.of(context)
+                                    .requestFocus(_model.unfocusNode)
+                                : FocusScope.of(context).unfocus(),
+                            child: Padding(
+                              padding: MediaQuery.viewInsetsOf(context),
+                              child: const PaymentsWidget(),
+                            ),
+                          ),
+                        );
+                      },
+                    ).then((value) => safeSetState(() {}));
                   },
                   child: Container(
                     width: double.infinity,
@@ -768,6 +789,8 @@ class _SettingsWidgetState extends State<SettingsWidget>
                               .controller
                               .forward(from: 0.0));
                     }
+
+                    context.pushNamed('terms_conditions');
                   },
                   child: Container(
                     width: double.infinity,
@@ -803,7 +826,7 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'ltg3gyw9' /* Terms of Service */,
+                                  'ltg3gyw9' /* Terms & conditions */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
