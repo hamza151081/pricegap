@@ -133,8 +133,7 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                                   child: TextFormField(
                                     controller: _model.textController,
                                     focusNode: _model.textFieldFocusNode,
-                                    autofocus: false,
-                                    readOnly: true,
+                                    autofocus: true,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelText:

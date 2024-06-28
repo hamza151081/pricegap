@@ -9,71 +9,26 @@ import 'package:flutter/material.dart';
 
 import 'dart:async';
 
-import 'package:receive_sharing_intent/receive_sharing_intent.dart';
+import 'package:receive_sharing_intent_plus/receive_sharing_intent_plus.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 Future handleReceivedIntent() async {
-  // Add your function code here!
-  late StreamSubscription _intentSub;
-  final _sharedFiles = <SharedMediaFile>[];
-
-  _intentSub = ReceiveSharingIntent.instance.getMediaStream().listen((value) {
-    _sharedFiles.clear();
-    _sharedFiles.addAll(value);
-
-    for (var file in _sharedFiles) {
-      if (file.type == SharedMediaType.text) {
-        final sharedText = file.path;
-
-        if (sharedText != null && sharedText.isNotEmpty) {
-          // Extract the deal details and URL from the shared text
-          print("we are printing the full text");
-          print(sharedText);
-          final dealDetails = sharedText.split(' https://');
-          final details = dealDetails[0];
-          final url = 'https://' + dealDetails[1];
-
-          // Save to Firestore
-          FirebaseFirestore.instance.collection('shared').add({
-            'details': details,
-            'url': url,
-            'timestamp': FieldValue.serverTimestamp(),
-          });
-        }
-      }
-    }
-  }, onError: (err) {
-    print("getMediaStream error: $err");
+  // For sharing or opening urls/text coming from outside the app while the app is closed
+  ReceiveSharingIntentPlus.getInitialText().then((String? value) {
+    print('Shared: $value');
   });
 
-  ReceiveSharingIntent.instance.getInitialMedia().then((value) {
-    _sharedFiles.clear();
-    _sharedFiles.addAll(value);
+// For shared text or opening urls coming from outside the app while the app is
+// in the memory
+  late StreamSubscription _intentTextStreamSubscription;
 
-    for (var file in _sharedFiles) {
-      if (file.type == SharedMediaType.text) {
-        final sharedText = file.path;
-
-        if (sharedText != null && sharedText.isNotEmpty) {
-          // Extract the deal details and URL from the shared text
-          print("we are printing the full text 2");
-          print(sharedText);
-
-          final dealDetails = sharedText.split(' https://');
-          final details = dealDetails[0];
-          final url = 'https://' + dealDetails[1];
-
-          // Save to Firestore
-          FirebaseFirestore.instance.collection('shared').add({
-            'details': details,
-            'url': url,
-            'timestamp': FieldValue.serverTimestamp(),
-          });
-        }
-      }
-    }
-
-    // Tell the library that we are done processing the intent.
-    ReceiveSharingIntent.instance.reset();
-  });
+  _intentTextStreamSubscription =
+      ReceiveSharingIntentPlus.getTextStream().listen(
+    (String value) {
+      print('Shared: $value');
+    },
+    onError: (err) {
+      print('getLinkStream error: $err');
+    },
+  );
 }
