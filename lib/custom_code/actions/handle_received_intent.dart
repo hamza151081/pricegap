@@ -27,6 +27,8 @@ Future handleReceivedIntent() async {
 
         if (sharedText != null && sharedText.isNotEmpty) {
           // Extract the deal details and URL from the shared text
+          print("we are printing the full text");
+          print(sharedText);
           final dealDetails = sharedText.split(' https://');
           final details = dealDetails[0];
           final url = 'https://' + dealDetails[1];
@@ -54,6 +56,9 @@ Future handleReceivedIntent() async {
 
         if (sharedText != null && sharedText.isNotEmpty) {
           // Extract the deal details and URL from the shared text
+          print("we are printing the full text 2");
+          print(sharedText);
+
           final dealDetails = sharedText.split(' https://');
           final details = dealDetails[0];
           final url = 'https://' + dealDetails[1];
