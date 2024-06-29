@@ -20,6 +20,8 @@
 	<array>
 		<string>en</string>
 		<string>fr</string>
+		<string>nl</string>
+		<string>es</string>
 	</array>
 
 	<key>CFBundleShortVersionString</key>
