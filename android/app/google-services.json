@@ -66,6 +66,14 @@
           }
         },
         {
+          "client_id": "755260779416-r33bh4gm80neo897lldqun5a8edko1fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.pricegap1",
+            "certificate_hash": "f4bea200c8892f6386f971647aefff2e457ee544"
+          }
+        },
+        {
           "client_id": "755260779416-oj23d3jdpvs1mmjk89lud9b2ri1moe5v.apps.googleusercontent.com",
           "client_type": 3
         }

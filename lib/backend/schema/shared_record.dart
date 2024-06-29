@@ -20,8 +20,14 @@ class SharedRecord extends FirestoreRecord {
   DateTime? get time => _time;
   bool hasTime() => _time != null;
 
+  // "url" field.
+  String? _url;
+  String get url => _url ?? '';
+  bool hasUrl() => _url != null;
+
   void _initializeFields() {
     _time = snapshotData['time'] as DateTime?;
+    _url = snapshotData['url'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -59,10 +65,12 @@ class SharedRecord extends FirestoreRecord {
 
 Map<String, dynamic> createSharedRecordData({
   DateTime? time,
+  String? url,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'time': time,
+      'url': url,
     }.withoutNulls,
   );
 
@@ -74,11 +82,11 @@ class SharedRecordDocumentEquality implements Equality<SharedRecord> {
 
   @override
   bool equals(SharedRecord? e1, SharedRecord? e2) {
-    return e1?.time == e2?.time;
+    return e1?.time == e2?.time && e1?.url == e2?.url;
   }
 
   @override
-  int hash(SharedRecord? e) => const ListEquality().hash([e?.time]);
+  int hash(SharedRecord? e) => const ListEquality().hash([e?.time, e?.url]);
 
   @override
   bool isValidKey(Object? o) => o is SharedRecord;

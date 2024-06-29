@@ -30,6 +30,9 @@ class Auth3Model extends FlutterFlowModel<Auth3Widget> {
       );
     }
 
+    if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
+      return 'Has to be a valid email address.';
+    }
     return null;
   }
 

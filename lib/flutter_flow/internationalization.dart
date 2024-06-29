@@ -252,7 +252,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Comment utiliser PriceGap',
     },
     '8u05vz42': {
-      'en': 'Open anyproduct on amazon',
+      'en': 'Open any product on amazon',
       'fr': 'Ouvrez n\'importe quel produit sur Amazon',
     },
     'xlay7xkg': {
@@ -266,6 +266,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bb1vz1j0': {
       'en': '2',
       'fr': '2',
+    },
+    'cyi8wse4': {
+      'en': 'Choose our from the menu',
+      'fr': '',
+    },
+    'rarlch5w': {
+      'en': '3',
+      'fr': '',
     },
     'qgc278ji': {
       'en': 'Available sources',

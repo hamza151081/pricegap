@@ -649,6 +649,8 @@ class _Auth3WidgetState extends State<Auth3Widget>
                                                           0.0, 0.0, 0.0, 16.0),
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
+                                                      Function() navigate =
+                                                          () {};
                                                       if (_model.formKey2
                                                                   .currentState ==
                                                               null ||
@@ -697,11 +699,19 @@ class _Auth3WidgetState extends State<Auth3Widget>
                                                         if (user == null) {
                                                           return;
                                                         }
+
+                                                        navigate = () =>
+                                                            context.goNamedAuth(
+                                                                'HomePage',
+                                                                context
+                                                                    .mounted);
                                                       } else {
                                                         _model.passwordisntfieldsSmae =
                                                             true;
                                                         setState(() {});
                                                       }
+
+                                                      navigate();
                                                     },
                                                     text: FFLocalizations.of(
                                                             context)
