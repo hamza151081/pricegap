@@ -269,11 +269,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cyi8wse4': {
       'en': 'Choose our from the menu',
-      'fr': '',
+      'fr': 'Choisissez notre dans le menu',
     },
     'rarlch5w': {
       'en': '3',
-      'fr': '',
+      'fr': '3',
     },
     'qgc278ji': {
       'en': 'Available sources',
@@ -818,20 +818,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'wsbqc4nx': {
       'en': 'Enter Amazon Product Url',
-      'fr': '',
+      'fr': 'Entrez l\'URL du produit Amazon',
     },
     'u1zbm4a4': {
       'en':
           'Once the product url added you will be able to track the product price overtime',
-      'fr': '',
+      'fr':
+          'Une fois l\'URL du produit ajoutée, vous pourrez suivre le prix du produit au fil du temps.',
     },
     'kjv11l99': {
       'en': 'Amazon product Url',
-      'fr': '',
+      'fr': 'URL du produit Amazon',
     },
     'q25wy2ri': {
       'en': 'Enter amazon url',
-      'fr': 'Entrez votre prénom',
+      'fr': 'Entrez l\'URL d\'Amazon',
     },
     'semqonwn': {
       'en': 'Field is required',
@@ -847,86 +848,87 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'm7yr5rkw': {
       'en': 'Add product',
-      'fr': '',
+      'fr': 'Ajouter un produit',
     },
   },
   // payments
   {
     'icabbri7': {
       'en': 'Get unlimited access!',
-      'fr': '',
+      'fr': 'Obtenez un accès illimité !',
     },
     '8dlu324c': {
       'en': 'Add illimited number of products ',
-      'fr': '',
+      'fr': 'Ajouter un nombre illimité de produits',
     },
     'fuzzbf9s': {
       'en': 'Get notified earlier when a discount ',
-      'fr': '',
+      'fr': 'Soyez averti plus tôt lorsqu\'une réduction',
     },
     'pq38jdoz': {
       'en': 'Be the first who explore new features ',
-      'fr': '',
+      'fr': 'Soyez le premier à explorer les nouvelles fonctionnalités',
     },
     'u7zafjna': {
       'en': 'À l\'année + 7 jours d\'essai gratuit',
-      'fr': '',
+      'fr': 'À l\'année + 7 jours d\'essai gratuit',
     },
     'iwm8xfzp': {
       'en': '69,99',
-      'fr': '',
+      'fr': '69,99',
     },
     '5ly76pln': {
       'en': '/an',
-      'fr': '',
+      'fr': '/un',
     },
     'ijzh338w': {
       'en': 'Au mois',
-      'fr': '',
+      'fr': 'Au mois',
     },
     '56iau6qt': {
       'en': '5,99',
-      'fr': '',
+      'fr': '5,99',
     },
     'f7uq5vyu': {
       'en': '/mois',
-      'fr': '',
+      'fr': '/mois',
     },
     'd00wqrof': {
       'en': 'Annulez à tout moment\n(au moins 24h avant le renouvellement).',
-      'fr': '',
+      'fr': 'Annulez à tout moment\n(au moins 24h avant le renouvellement).',
     },
     '3u5ersp6': {
       'en': 'Continuer',
-      'fr': '',
+      'fr': 'Continuer',
     },
   },
   // deleteProduct
   {
     'vy879ftz': {
       'en': 'Delete Product',
-      'fr': '',
+      'fr': 'Supprimer le produit',
     },
     '6438pgeu': {
       'en':
           'Are you sure you want to delete these products? You will no longer receive any notifications about their discounts.',
-      'fr': '',
+      'fr':
+          'Etes-vous sûr de vouloir supprimer ces produits ? Vous ne recevrez plus de notifications concernant leurs réductions.',
     },
     'gtwru7lz': {
       'en': 'Field is required',
-      'fr': '',
+      'fr': 'Champ requis',
     },
     'ggbeac1z': {
       'en': 'Please choose an option from the dropdown',
-      'fr': '',
+      'fr': 'Veuillez choisir une option dans la liste déroulante',
     },
     'hnjz1ijg': {
       'en': 'Cancel',
-      'fr': '',
+      'fr': 'Annuler',
     },
     '9zqtjz7z': {
       'en': 'Delete',
-      'fr': '',
+      'fr': 'Supprimer',
     },
   },
   // Miscellaneous

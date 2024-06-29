@@ -718,6 +718,8 @@ class _Auth3WidgetState extends State<Auth3Widget>
                                                                 'HomePage',
                                                                 context
                                                                     .mounted);
+                                                        await authManager
+                                                            .sendEmailVerification();
                                                       } else {
                                                         _model.passwordisntfieldsSmae =
                                                             true;
