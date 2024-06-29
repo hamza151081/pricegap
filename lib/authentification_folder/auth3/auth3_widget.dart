@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -699,6 +700,18 @@ class _Auth3WidgetState extends State<Auth3Widget>
                                                         if (user == null) {
                                                           return;
                                                         }
+
+                                                        await UsersRecord
+                                                            .collection
+                                                            .doc(user.uid)
+                                                            .update(
+                                                                createUsersRecordData(
+                                                              email: _model
+                                                                  .emailAddressCreateTextController
+                                                                  .text,
+                                                              createdTime:
+                                                                  getCurrentTimestamp,
+                                                            ));
 
                                                         navigate = () =>
                                                             context.goNamedAuth(

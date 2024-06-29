@@ -83,7 +83,9 @@ class _DeleteProductWidgetState extends State<DeleteProductWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 0.0),
                               child: Text(
-                                'Delete Product',
+                                FFLocalizations.of(context).getText(
+                                  'vy879ftz' /* Delete Product */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .headlineMedium
                                     .override(
@@ -103,7 +105,9 @@ class _DeleteProductWidgetState extends State<DeleteProductWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 0.0),
                               child: Text(
-                                'Are you sure you want to delete these products? You will no longer receive any notifications about their discounts.',
+                                FFLocalizations.of(context).getText(
+                                  '6438pgeu' /* Are you sure you want to delet... */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -139,7 +143,9 @@ class _DeleteProductWidgetState extends State<DeleteProductWidget> {
                               onPressed: () async {
                                 Navigator.pop(context);
                               },
-                              text: 'Cancel',
+                              text: FFLocalizations.of(context).getText(
+                                'hnjz1ijg' /* Cancel */,
+                              ),
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 50.0,
@@ -168,7 +174,9 @@ class _DeleteProductWidgetState extends State<DeleteProductWidget> {
                                 await widget.productDoc!.reference.delete();
                                 Navigator.pop(context);
                               },
-                              text: 'Delete',
+                              text: FFLocalizations.of(context).getText(
+                                '9zqtjz7z' /* Delete */,
+                              ),
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 50.0,

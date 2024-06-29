@@ -903,28 +903,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // deleteProduct
   {
-    'ay648rxz': {
+    'vy879ftz': {
       'en': 'Delete Product',
       'fr': '',
     },
-    'x6wcjfyw': {
+    '6438pgeu': {
       'en':
           'Are you sure you want to delete these products? You will no longer receive any notifications about their discounts.',
       'fr': '',
     },
-    '086f5p03': {
+    'gtwru7lz': {
       'en': 'Field is required',
       'fr': '',
     },
-    'nsvucure': {
+    'ggbeac1z': {
       'en': 'Please choose an option from the dropdown',
       'fr': '',
     },
-    '5z6tdk6x': {
+    'hnjz1ijg': {
       'en': 'Cancel',
       'fr': '',
     },
-    'wstr59rd': {
+    '9zqtjz7z': {
       'en': 'Delete',
       'fr': '',
     },
