@@ -60,7 +60,7 @@ class _WebviewProductWidgetState extends State<WebviewProductWidget> {
             children: [
               Expanded(
                 child: FlutterFlowWebView(
-                  content: 'https://flutter.dev',
+                  content: widget.url!,
                   bypass: false,
                   height: MediaQuery.sizeOf(context).height * 0.9,
                   verticalScroll: false,
