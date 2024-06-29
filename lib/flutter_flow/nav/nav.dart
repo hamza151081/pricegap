@@ -113,7 +113,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'webviewProduct',
           path: '/webviewProduct',
-          builder: (context, params) => const WebviewProductWidget(),
+          builder: (context, params) => WebviewProductWidget(
+            url: params.getParam(
+              'url',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'Settings',

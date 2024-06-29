@@ -1,8 +1,10 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/product/add_link/add_link_widget.dart';
 import '/product/card17_location/card17_location_widget.dart';
+import '/product/empty_product/empty_product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'details_model.dart';
@@ -341,18 +343,45 @@ class _DetailsWidgetState extends State<DetailsWidget> {
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    wrapWithModel(
-                      model: _model.card17LocationModel,
-                      updateCallback: () => setState(() {}),
-                      updateOnChange: true,
-                      child: const Card17LocationWidget(),
-                    ),
-                  ].divide(const SizedBox(height: 16.0)),
+                child: StreamBuilder<List<SharedRecord>>(
+                  stream: querySharedRecord(),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 50.0,
+                          height: 50.0,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              FlutterFlowTheme.of(context).primary,
+                            ),
+                          ),
+                        ),
+                      );
+                    }
+                    List<SharedRecord> listViewSharedRecordList =
+                        snapshot.data!;
+                    if (listViewSharedRecordList.isEmpty) {
+                      return const EmptyProductWidget();
+                    }
+                    return ListView.separated(
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      itemCount: listViewSharedRecordList.length,
+                      separatorBuilder: (_, __) => const SizedBox(height: 16.0),
+                      itemBuilder: (context, listViewIndex) {
+                        final listViewSharedRecord =
+                            listViewSharedRecordList[listViewIndex];
+                        return Card17LocationWidget(
+                          key: Key(
+                              'Keysmm_${listViewIndex}_of_${listViewSharedRecordList.length}'),
+                          sharedDoc: listViewSharedRecord,
+                        );
+                      },
+                    );
+                  },
                 ),
               ),
             ],

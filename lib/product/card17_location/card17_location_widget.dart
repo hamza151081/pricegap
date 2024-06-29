@@ -1,13 +1,21 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/product/delete_product/delete_product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'card17_location_model.dart';
 export 'card17_location_model.dart';
 
 class Card17LocationWidget extends StatefulWidget {
-  const Card17LocationWidget({super.key});
+  const Card17LocationWidget({
+    super.key,
+    required this.sharedDoc,
+  });
+
+  final SharedRecord? sharedDoc;
 
   @override
   State<Card17LocationWidget> createState() => _Card17LocationWidgetState();
@@ -329,7 +337,7 @@ class _Card17LocationWidgetState extends State<Card17LocationWidget>
                                           ),
                                     ),
                                   ),
-                                  if (true)
+                                  if (!true)
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
@@ -355,10 +363,27 @@ class _Card17LocationWidgetState extends State<Card17LocationWidget>
                         ),
                       ),
                     ),
-                    Icon(
-                      Icons.keyboard_arrow_right_rounded,
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed(
+                          'webviewProduct',
+                          queryParameters: {
+                            'url': serializeParam(
+                              widget.sharedDoc?.url,
+                              ParamType.String,
+                            ),
+                          }.withoutNulls,
+                        );
+                      },
+                      child: Icon(
+                        Icons.keyboard_arrow_right_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
                     ),
                   ],
                 ),
@@ -367,10 +392,34 @@ class _Card17LocationWidgetState extends State<Card17LocationWidget>
                 alignment: const AlignmentDirectional(1.0, -1.0),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 12.0, 0.0),
-                  child: Icon(
-                    Icons.close,
-                    color: FlutterFlowTheme.of(context).error,
-                    size: 24.0,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        enableDrag: false,
+                        context: context,
+                        builder: (context) {
+                          return WebViewAware(
+                            child: Padding(
+                              padding: MediaQuery.viewInsetsOf(context),
+                              child: DeleteProductWidget(
+                                productDoc: widget.sharedDoc!,
+                              ),
+                            ),
+                          );
+                        },
+                      ).then((value) => safeSetState(() {}));
+                    },
+                    child: Icon(
+                      Icons.close,
+                      color: FlutterFlowTheme.of(context).error,
+                      size: 24.0,
+                    ),
                   ),
                 ),
               ),

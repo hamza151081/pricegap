@@ -1,19 +1,25 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'add_link_model.dart';
-export 'add_link_model.dart';
+import 'delete_product_model.dart';
+export 'delete_product_model.dart';
 
-class AddLinkWidget extends StatefulWidget {
-  const AddLinkWidget({super.key});
+class DeleteProductWidget extends StatefulWidget {
+  const DeleteProductWidget({
+    super.key,
+    required this.productDoc,
+  });
+
+  final SharedRecord? productDoc;
 
   @override
-  State<AddLinkWidget> createState() => _AddLinkWidgetState();
+  State<DeleteProductWidget> createState() => _DeleteProductWidgetState();
 }
 
-class _AddLinkWidgetState extends State<AddLinkWidget> {
-  late AddLinkModel _model;
+class _DeleteProductWidgetState extends State<DeleteProductWidget> {
+  late DeleteProductModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -24,10 +30,7 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AddLinkModel());
-
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model = createModel(context, () => DeleteProductModel());
   }
 
   @override
@@ -41,7 +44,7 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
-      height: 350.0,
+      height: 300.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
         borderRadius: const BorderRadius.only(
@@ -80,9 +83,7 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 16.0, 0.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'wsbqc4nx' /* Enter Amazon Product Url */,
-                                ),
+                                'Delete Product',
                                 style: FlutterFlowTheme.of(context)
                                     .headlineMedium
                                     .override(
@@ -102,9 +103,7 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 0.0),
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'u1zbm4a4' /* Once the product url added you... */,
-                                ),
+                                'Are you sure you want to delete these products? You will no longer receive any notifications about their discounts.',
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -119,92 +118,13 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                       Form(
                         key: _model.formKey,
                         autovalidateMode: AutovalidateMode.disabled,
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                        child: const Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 16.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 30.0, 0.0, 20.0),
-                                  child: TextFormField(
-                                    controller: _model.textController,
-                                    focusNode: _model.textFieldFocusNode,
-                                    autofocus: true,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelText:
-                                          FFLocalizations.of(context).getText(
-                                        'kjv11l99' /* Amazon product Url */,
-                                      ),
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
-                                      hintText:
-                                          FFLocalizations.of(context).getText(
-                                        'q25wy2ri' /* Enter amazon url */,
-                                      ),
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      errorBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                      focusedErrorBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    validator: _model.textControllerValidator
-                                        .asValidator(context),
-                                  ),
-                                ),
-                              ),
-                            ],
+                            children: [],
                           ),
                         ),
                       ),
@@ -219,9 +139,7 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               onPressed: () async {
                                 Navigator.pop(context);
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'zf0ty7v8' /* Cancel */,
-                              ),
+                              text: 'Cancel',
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 50.0,
@@ -246,12 +164,11 @@ class _AddLinkWidgetState extends State<AddLinkWidget> {
                               ),
                             ),
                             FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed: () async {
+                                await widget.productDoc!.reference.delete();
+                                Navigator.pop(context);
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'm7yr5rkw' /* Add product */,
-                              ),
+                              text: 'Delete',
                               options: FFButtonOptions(
                                 width: 150.0,
                                 height: 50.0,

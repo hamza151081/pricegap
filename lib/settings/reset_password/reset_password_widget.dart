@@ -242,8 +242,9 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 2.0,
-                                borderSide: const BorderSide(
-                                  color: Colors.transparent,
+                                borderSide: BorderSide(
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
                                   width: 1.0,
                                 ),
                               ),

@@ -6,7 +6,12 @@ import 'webview_product_model.dart';
 export 'webview_product_model.dart';
 
 class WebviewProductWidget extends StatefulWidget {
-  const WebviewProductWidget({super.key});
+  const WebviewProductWidget({
+    super.key,
+    required this.url,
+  });
+
+  final String? url;
 
   @override
   State<WebviewProductWidget> createState() => _WebviewProductWidgetState();
