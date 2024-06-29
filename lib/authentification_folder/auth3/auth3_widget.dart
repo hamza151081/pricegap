@@ -652,10 +652,10 @@ class _Auth3WidgetState extends State<Auth3Widget>
                                                     onPressed: () async {
                                                       Function() navigate =
                                                           () {};
-                                                      if (_model.formKey2
+                                                      if (_model.formKey1
                                                                   .currentState ==
                                                               null ||
-                                                          !_model.formKey2
+                                                          !_model.formKey1
                                                               .currentState!
                                                               .validate()) {
                                                         return;
