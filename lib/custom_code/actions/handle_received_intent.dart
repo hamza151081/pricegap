@@ -42,7 +42,7 @@ Future<void> handleSharedText(String? value) async {
     // Split the text by "https//" to get the URL
     List<String> parts = value.split('https://');
     if (parts.length > 1) {
-      String url = 'https://' + parts[1];
+      String url = 'https://' + parts[1].split(',')[0];
       print('Extracted URL: $url');
 
       // Check if there's a document in the 'product' collection with the same URL
