@@ -36,7 +36,7 @@
             <key>CFBundleURLSchemes</key>
             <array>
                 <string>com.googleusercontent.apps.755260779416-phcmj4eaohtsmcnkt4ec78q89lvn0r0q</string>
-                
+                <string>ShareMedia-$(PRODUCT_BUNDLE_IDENTIFIER)</string>
             </array>
         </dict>
 
@@ -87,5 +87,11 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>AppGroupId</key>
+	<string>$(CUSTOM_GROUP_ID)</string>
 </dict>
 </plist>
