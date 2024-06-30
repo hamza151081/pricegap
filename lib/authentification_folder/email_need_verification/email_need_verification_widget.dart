@@ -165,7 +165,9 @@ class _EmailNeedVerificationWidgetState
                         onPressed: () async {
                           context.pushNamed('HomePage');
                         },
-                        text: 'J\'ai verifié mon compte',
+                        text: FFLocalizations.of(context).getText(
+                          'yrxz6t5n' /* J'ai verifié mon compte */,
+                        ),
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 50.0,

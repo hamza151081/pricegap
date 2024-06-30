@@ -631,7 +631,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'fr': 'Renvoyer l\'e-mail de vérification',
       'nl': '',
     },
-    'iiyskyw4': {
+    'yrxz6t5n': {
       'en': 'J\'ai verifié mon compte',
       'es': '',
       'fr': '',
